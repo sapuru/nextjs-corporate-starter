@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
 
 import localFont from "next/font/local"
+import { OrdersByDayChart } from "./components/charts/OrdersByDayChart";
  
 // Font files can be colocated inside of `app`
 const AASmart = localFont({
@@ -114,6 +115,7 @@ export default async function RootLayout({
 
         <main className="dark:bg-black dark:text-gray-100 min-h-screen">
           {children}
+          <OrdersByDayChart></OrdersByDayChart>
         </main>
 
         <Banner data={notificationBanner} />
