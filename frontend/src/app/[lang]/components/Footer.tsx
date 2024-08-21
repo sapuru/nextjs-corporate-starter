@@ -28,8 +28,8 @@ function FooterLink({ url, text }: FooterLink) {
     <li className="flex">
       <Link
         href={url}
-        className={`hover:dark:text-violet-400 ${
-          path === url && "dark:text-violet-400 dark:border-violet-400"
+        className={`hover:dark:text-blue-600 ${
+          path === url && "dark:text-blue-600 dark:border-violet-400"
         }}`}
       >
         {text}
@@ -43,7 +43,7 @@ function CategoryLink({ attributes }: CategoryLink) {
     <li className="flex">
       <Link
         href={`/blog/${attributes.slug}`}
-        className="hover:dark:text-violet-400"
+        className="hover:dark:text-blue-400"
       >
         {attributes.name}
       </Link>
@@ -88,12 +88,12 @@ export default function Footer({
         <div className="grid grid-cols-12">
           <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
             <Logo src={logoUrl}>
-              {logoText && <h2 className="text-2xl font-bold">{logoText}</h2>}
+              {logoText && <h2 className="text-2xl font-bold text-blue-800">{logoText}</h2>}
             </Logo>
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Categories</p>
+            <p className="pb-1 text-lg font-medium">Categorías</p>
             <ul>
               {categoryLinks.map((link: CategoryLink) => (
                 <CategoryLink key={link.id} {...link} />
@@ -102,7 +102,7 @@ export default function Footer({
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Menu</p>
+            <p className="pb-1 text-lg font-medium">Menú</p>
             <ul>
               {menuLinks.map((link: FooterLink) => (
                 <FooterLink key={link.id} {...link} />
@@ -113,7 +113,7 @@ export default function Footer({
         <div className="grid justify-center pt-6 lg:justify-between">
           <div className="flex">
             <span className="mr-2">
-              ©{new Date().getFullYear()} All rights reserved
+              ©{new Date().getFullYear()} Todos los derechos reservados
             </span>
             <ul className="flex">
               {legalLinks.map((link: FooterLink) => (

@@ -1097,6 +1097,12 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    chart: Attribute.Component<'shared.quote', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
