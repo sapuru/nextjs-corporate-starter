@@ -23,6 +23,9 @@
     "authorName": {
       "type": "string",
       "required": true
+    },
+    "cargo": {
+      "type": "string"
     }
   }
 }

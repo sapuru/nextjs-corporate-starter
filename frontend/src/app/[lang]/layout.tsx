@@ -9,6 +9,35 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
 
+import localFont from "next/font/local"
+ 
+// Font files can be colocated inside of `app`
+const AASmart = localFont({
+  src: [
+    {
+      path: "../../../public/fonts/AASmartSans-Light.woff2",
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../../public/fonts/AASmartSans-LightItalic.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../../public/fonts/AASmartSans-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../../public/fonts/AASmartSans-SemiBoldItalic.woff2',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  variable:'--font-AASmart',
+});
+
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -76,7 +105,7 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang}>
-      <body>
+      <body className={`${AASmart.variable} font-sans`}>
         <Navbar
           links={navbar.links}
           logoUrl={navbarLogoUrl}

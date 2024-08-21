@@ -359,6 +359,7 @@ export interface ElementsTestimonial extends Schema.Component {
     picture: Attribute.Media<'images'> & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
     authorName: Attribute.String & Attribute.Required;
+    cargo: Attribute.String;
   };
 }
 

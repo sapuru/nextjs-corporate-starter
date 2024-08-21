@@ -68,7 +68,7 @@ export default function Profile() {
 
   return (
     <div>
-      <PageHeader heading="Our Blog" text="Checkout Something Cool" />
+      <PageHeader heading="Medios Físicos" text="" />
       <Blog data={data}>
         {meta!.pagination.start + meta!.pagination.limit <
           meta!.pagination.total && (
@@ -78,7 +78,7 @@ export default function Profile() {
               className="px-6 py-3 text-sm rounded-lg hover:underline dark:bg-gray-900 dark:text-gray-400"
               onClick={loadMorePosts}
             >
-              Load more posts...
+              Cargar más contenido...
             </button>
           </div>
         )}
